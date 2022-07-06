@@ -1,0 +1,11 @@
+{
+  "name": "gedemsa",
+  "version": "1.0.0",
+  "description": "gedemsa atheletics club",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tamirat",
+  "license": "ISC"
+}
