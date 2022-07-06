@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 const dotEnv = require('dotenv');
 var session = require('express-session');
 
+const authentication_route = require('./routes/authentication');
+
+
 dotEnv.config();
 const app = express();
 
@@ -36,6 +39,8 @@ app.get('/api',(req,res)=>{
 
 
 // defining route
+app.use('/api/v1/auth', authentication_route);
+
 
 
 // assinging port
