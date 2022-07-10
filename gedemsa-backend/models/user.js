@@ -30,11 +30,7 @@ const user = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Field"
     },
-    speciality : {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: "Speciality"
-    },
-
+    
     approved: {
         type: Boolean,
         default: false

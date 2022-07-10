@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const {Speciality} = require('../models/field');
 const {Field} = require('../models/field');
 
 
@@ -13,11 +12,10 @@ const event = new mongoose.Schema({
         required: true
     },
     fields: [Field],
-
     date: {
         type: Date,
         required: true,
-        default: Date.now()
+        default: Date.now
     },
     available : {
         type: Boolean,
