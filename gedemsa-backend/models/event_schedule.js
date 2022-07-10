@@ -5,7 +5,7 @@ const eventScheculeSchema = new mongoose.Schema({
         type: Date,
         defualt: Date.now,
         required: true
-    },
+    },  
     event: {
         type: mongoose.Schema.Types.ObjectId,
         ref : 'Event'
@@ -18,7 +18,6 @@ const eventScheculeSchema = new mongoose.Schema({
         type: [mongoose.Schema.Types.ObjectId],
         ref : 'User'
     },
-    
 })
 
 const EventSchedule = mongoose.model('EventSchedule', eventScheculeSchema);
