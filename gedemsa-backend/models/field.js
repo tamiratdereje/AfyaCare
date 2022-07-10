@@ -6,15 +6,18 @@ const field = new mongoose.Schema({
         type: String,
         required: true
     },
-    
-    speciality: [Speciality]
+    speciality: [SpecialitySChema]
 
 }); 
 
-const Speciality = new mongoose.Schema({
+const SpecialitySChema = new mongoose.Schema({
     name: String
 }); 
 
+const Speciality = mongoose.model('Speciality', SpecialitySChema);
+const Field = mongoose.model('Field', field);
 
-module.exports = mongoose.model('Speciality', Speciality);
-module.exports = mongoose.model('Field', field);
+module.exports = {
+    Speciality : Speciality,
+    Field : Field
+}
